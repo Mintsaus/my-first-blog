@@ -1,7 +1,25 @@
-h1 a {
+h1, h2 {
     color: #FCA205;
+    font-family: 'Lobster';
 }
 
 body {
     margin:  auto 15em;
+    background-color: beige;
+}
+
+.header{
+    padding: 3em 3em 3em 6em;
+    background-color: blanchedalmond;
+}
+
+.post{
+    margin-bottom: 4em;
+    background-color: aliceblue;
+    /*border: 2px solid #4b4b4b;*/
+    padding: 1em;
+}
+
+.footer{
+    background-color: antiquewhite;
 }
