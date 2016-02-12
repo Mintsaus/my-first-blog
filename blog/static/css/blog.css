@@ -1,6 +1,10 @@
-h1, h2 {
+h1, h2, h3, h4 {
     color: #FCA205;
-    font-family: 'Lobster';
+    font-family: 'Lobster', 'cursive';
+}
+
+p{
+    font-size: 16px;
 }
 
 body {
@@ -8,11 +12,19 @@ body {
     background-color: beige;
 }
 
-.header{
-    padding: 3em 3em 3em 6em;
-    background-color: blanchedalmond;
+.page-header {
+    background-color: #ff9400;
+    margin-top: 0;
+    padding: 20px 20px 20px 40px;
 }
 
+.page-header h1, .page-header a, .page-header a:visited{
+    color: #ffffff;
+}
+
+.content{
+    margin-left: 40px;
+}
 .post{
     margin-bottom: 4em;
     background-color: aliceblue;
@@ -20,6 +32,26 @@ body {
     padding: 1em;
 }
 
+.date{
+    float: right;
+    color: #828282;
+}
 .footer{
     background-color: antiquewhite;
+}
+
+.post-form textarea, .post-form input{
+    width:100%;
+}
+
+.save{
+    float: right;
+}
+
+.top-menu, .top-menu:hover, .top-menu:visited{
+    color: #ffffff;
+    float: right;
+    font-size: 26px;
+    margin-right: 20px;
+
 }

@@ -1,60 +1,14 @@
-<!DOCTYPE html>
-{% load staticfiles %}
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Django Tutorial</title>
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
-    <link rel="stylesheet" href="{% static 'css/blog.css' %}">
-    <link href="http://fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
-</head>
-<body>
-    <div class="header">
-        <h1> The <a href="">django blog</a></h1>
-        <p>This web application is done according to the <a href="http://tutorial.djangogirls.org/en/index.html">DjangoGirls Tutorial</a></p>
-    </div>
-    <template id="template1">
-    <div>
-        <h2> First div</h2>
-        <p>This is my personal project to improve my web development skills</p>
-        <p>I'll <em>try</em> to test a lot of the basics in the beginning to get som training done, and then move on to more advanced stuff</p>
-    </div>
+{% extends 'blog/base.html' %}
 
-    <div>
-        <h2>Second div </h2>
-        <p> Hopefully I'll get some experience both from the pure front-end side and some server work</p>
-    </div>
-
-    <div>
-        <h2>Things I'd like to improve include:</h2>
-        <ul>
-            <li>HTML & CSS</li>
-            <li>Javascript</li>
-            <li>Django</li>
-            <li>JS frameworks</li>
-        </ul>
-    </div>
-</template>
-<div class="container">
-    <div class="row">
-        <div class="col-md-8">
-            {% for post in posts %}
-            <div class="post">
-                <div class="date">
-                    <p>published: {{post.published_date}}</p>
-                </div>
-                <h2><a href="">{{post.title}}</a></h2>
-                <p>{{post.text|linebreaks}}</p>
-            </div>
-            {% endfor %}
+{% block content %}
+{% for post in posts %}
+    <div class="post">
+        <div class="date">
+            <p>published: {{post.published_date}}</p>
         </div>
+        <h2><a href="">{{post.title}}</a></h2>
+        <p>{{post.text|linebreaks}}</p>
     </div>
-</div>
-    <div class="footer">
-        <h2>About me</h2>
-        <p>I study I and have an interest in most things IT, but I prefer high level stuff. C pointers I leave to others.</p>
-    </div>
+{% endfor %}
 
-</body>
-</html>
+{% endblock %}
