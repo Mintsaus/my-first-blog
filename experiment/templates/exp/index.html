@@ -1,11 +1,45 @@
 <!DOCTYPE html>
+{% load staticfiles %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>The experiments</title>
+    <link rel="stylesheet" href="{% static 'css/exp.css' %}">
 </head>
 <body>
-<h1>Welcome to the experiments!</h1>
+
+    <header class="top-header">
+        <h1>Welcome to the experiments!</h1>
+        <nav class="top-menu">
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+            <a href="/">Blog</a>
+        </nav>
+    </header>
+
+    <main class="container content">
+        <section class="game-section">
+            <header>
+                <h1>Games</h1>
+            </header>
+            <ul>
+                <li><a href="#">MineSweeper</a></li>
+                <li><a href="#">Memory</a></li>
+                <li><a href="#">Lorem</a></li>
+            </ul>
+        </section>
+
+        <section class="project-section">
+            <header>
+                <h1>Projects</h1>
+            </header>
+            <ul>
+                <li><a href="#">Angular</a></li>
+                <li><a href="#">JQuery stuff</a></li>
+                <li><a href="#">Resumé</a></li>
+            </ul>
+        </section>
+    </main>
 
 </body>
 </html>
