@@ -61,6 +61,10 @@ p{
     color: #828282;
 }
 
+.date p {
+    margin: 5px 0px;
+}
+
 .save{
     float: right;
 }
@@ -71,4 +75,11 @@ p{
     font-size: 26px;
     margin-right: 20px;
 
+}
+.post-form textarea, .post-form input {
+    width: 100%;
+}
+
+.edit {
+    float: right;
 }

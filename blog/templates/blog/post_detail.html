@@ -2,9 +2,12 @@
 
 {% block content %}
     <div class="post large-post">
+    <a class="btn btn-default edit" href="{% url 'post_edit' pk=post.pk %}"><span class="glyphicon glyphicon-pencil"></span></a>
+        {% if post.published_date %}
         <div class="date">
             <p>published: {{post.published_date}}</p>
         </div>
+        {% endif %}
         <h2><a href="{% url 'post_detail' pk=post.pk %}">{{post.title}}</a></h2>
         <p>{{post.text|linebreaks}}</p>
     </div>
