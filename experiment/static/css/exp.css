@@ -1,6 +1,12 @@
+/*General styling for entire document*/
 body{
     margin: 0px;
+    background-color: ghostwhite;
 }
+
+
+/*The header*/
+
 
 .top-header {
     width: 100%;
@@ -11,20 +17,75 @@ body{
 }
 .top-header h1 {
     margin: 1em auto;
-    width: 50%;
+    /*width: 50%;*/
+    text-align: center;
 
 }
 .top-menu{
-   /* margin-left: 85%;*/
-    width: 15%;
+    margin:0em auto;
     overflow: auto;
-    padding: 1em 0em;
-    /*float: right;*/
+    /*padding: 1em 0em;*/
+    width: 20%;
 }
 
 .top-menu a {
     background-color: #8dd700;
-    display: block;
-    width: 33%;
+    width: 30%;
     float: left;
+    text-align: center;
+    padding: 0.5em 0;
+    border: solid 1px #ffffff;
+    border-radius: 0.5em;
+}
+
+/*Main content area*/
+
+main {
+    width: 60%;
+    margin: auto;
+    overflow: auto;
+}
+
+main section {
+    width: 50%;
+    text-align: center;
+}
+
+main section .header {
+    background-color: #bdff00;
+     margin: auto;
+}
+
+main section .header h1 {
+    margin: 0;
+    padding: 0.83em 0;
+}
+
+main section ul {
+    background-color: #dddddd;
+}
+
+main section li{
+    list-style-type: none;
+    padding: 1.5em;
+    background-color: #dddddd;
+}
+
+main section a{
+
+}
+.game-section {
+    float:left;
+}
+.game-section ul {
+    padding: 1em 0 0 1em;
+    margin: 0;
+}
+
+.project-section {
+    float:right;
+}
+.project-section ul {
+    padding: 1em 1em 0 0;
+    margin: 0;
 }
