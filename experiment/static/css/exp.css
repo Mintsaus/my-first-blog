@@ -44,11 +44,13 @@ main {
     width: 60%;
     margin: auto;
     overflow: auto;
+    background-color: #dddddd;
 }
 
 main section {
     width: 50%;
     text-align: center;
+
 }
 
 main section .header {
@@ -62,7 +64,7 @@ main section .header h1 {
 }
 
 main section ul {
-    background-color: #dddddd;
+    /*background-color: #dddddd;*/
 }
 
 main section li{
@@ -88,4 +90,19 @@ main section a{
 .project-section ul {
     padding: 1em 1em 0 0;
     margin: 0;
+}
+
+section.game {
+    margin: auto;
+}
+
+section table.game-area{
+    margin: auto;
+}
+
+table.game-area td{
+    width: 20px;
+    height: 20px;
+    border: solid 1px #000000;
+    background-color: #777777;
 }
