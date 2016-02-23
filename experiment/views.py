@@ -6,3 +6,6 @@ def exp_index(request):
 
 def exp_minesweeper(request):
     return render(request, 'exp/minesweeper.html')
+
+def exp_list(request):
+    return render(request, 'exp/list.html')

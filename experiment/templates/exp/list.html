@@ -1,0 +1,39 @@
+<section class="listSection">
+
+    <ul id="myList">
+
+    </ul>
+    <div class="newItemButton"><button id="itemBtn">New item</button></div>
+    <form id="addItemForm">
+        <input type=text" id="listItemDescr" placeholder="Add description" />
+        <input type="submit" id="addItem" value="add" />
+    </form>
+</section>
+
+<script>
+    $( document).ready(function(){
+        var $list, $form;
+        $list = $('ul#myList');
+        $form = $('form#addItemForm');
+
+        $list.on('click', 'li', function(){
+            var $oldtext = $(this).text();
+            $(this).remove();
+            $list.append('<li>' + $oldtext + '</li>');
+        });
+
+        $form.hide();
+        $('div.newItemButton').on('click', function(){
+            $('#itemBtn').hide()
+            $form.show();
+        });
+
+        $form.on('submit', function(e){
+            e.preventDefault();
+            var $descr = $('input#listItemDescr');
+            var text = $descr.val();
+            $('ul#myList').append('<li class=\"item\">' + text + '</li>');
+            $descr.val('');
+        });
+    })
+</script>

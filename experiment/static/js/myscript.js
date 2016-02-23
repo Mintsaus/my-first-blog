@@ -8,13 +8,15 @@ $( document ).ready(function(){
     }));
 
     $('main.content a').on('click', function(event){
-        $.get('/exp/ms', function(data){
+        var url = $(this).attr('href');
+        $.get(url, function(data){
             $('main.content').html(data);
         });
+        event.preventDefault();
     });
 
-    $('main.content td').on('click', function(){
+    /*$('main.content td').on('click', function(){
         alert("click td");
         $(this).css("background-color","red" );
-    });
+    }); */
 });
